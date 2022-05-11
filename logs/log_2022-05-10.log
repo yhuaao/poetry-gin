@@ -1,0 +1,156 @@
+2022-05-10T15:27:26.441+0800	INFO	middleware/LoggerMiddleware.go:23	/favicon.ico	{"statusxixixixi": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36", "errors": "", "cost": "0s"}
+2022-05-10T15:27:27.059+0800	INFO	middleware/LoggerMiddleware.go:23	/favicon.ico	{"statusxixixixi": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36", "errors": "", "cost": "0s"}
+2022-05-10T15:27:27.392+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/list2	{"statusxixixixi": 404, "method": "GET", "path": "/v1/user/list2", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36", "errors": "", "cost": "0s"}
+2022-05-10T15:27:36.537+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/list2	{"statusxixixixi": 404, "method": "GET", "path": "/v1/user/list2", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36", "errors": "", "cost": "0s"}
+2022-05-10T15:28:17.358+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/list2	{"status": 404, "method": "GET", "path": "/v1/user/list2", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36", "errors": "", "cost": "0s"}
+2022-05-10T15:40:04.035+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/login	{"status": 404, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T15:40:28.119+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/login	{"status": 404, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T15:40:45.345+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T15:40:54.904+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T15:40:56.398+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "581.6µs"}
+2022-05-10T15:40:57.777+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T15:42:20.850+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T16:06:50.737+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/l2ogin	{"status": 404, "method": "POST", "path": "/v1/user/l2ogin", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T16:35:45.680+0800	ERROR	initialize/mysql.go:30	mysql connect failed, err:	{"err": "dial tcp 127.0.0.1:8306: connectex: No connection could be made because the target machine actively refused it."}
+poetry/initialize.InitMySqlGorm
+	C:/test/gin/initialize/mysql.go:30
+main.main
+	C:/test/gin/main.go:19
+runtime.main
+	C:/soft/Go/src/runtime/proc.go:250
+2022-05-10T16:55:04.211+0800	ERROR	middleware/RecoveryMiddleware.go:44	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/user_list HTTP/1.1\r\nHost: localhost:9501\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 270\r\nContent-Type: multipart/form-data; boundary=--------------------------414818569161367585266097\r\nPostman-Token: 1dd49471-a818-4bec-9c68-90d64b89bc45\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 54 [running]:\nruntime/debug.Stack()\n\tC:/soft/Go/src/runtime/debug/stack.go:24 +0x65\npoetry/app/middleware.RecoveryMiddleware.func1.1()\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:47 +0x2da\npanic({0x13ffce0, 0x19ddcd0})\n\tC:/soft/Go/src/runtime/panic.go:838 +0x207\ngorm.io/gorm.(*DB).getInstance(0x13bd180?)\n\tE:/golang/pkg/mod/gorm.io/gorm@v1.23.5/gorm.go:363 +0x18\ngorm.io/gorm.(*DB).Offset(0xc0004741c0?, 0x0)\n\tE:/golang/pkg/mod/gorm.io/gorm@v1.23.5/chainable_api.go:253 +0x1e\npoetry/app/dao.GetUserListDao(0x1, 0x64)\n\tC:/test/gin/app/dao/GetUserListDDao.go:16 +0x85\npoetry/app/controller.UserController.UserList({}, 0xc00061c000?)\n\tC:/test/gin/app/controller/UserController.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.RecoveryMiddleware.func1(0xc00061c000)\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:58 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.LoggerMiddleware.func1(0xc00061c000)\n\tC:/test/gin/app/middleware/LoggerMiddleware.go:17 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc00061c000)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc00061c000)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000084b60, 0xc00061c000)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000084b60, {0x15ccc50?, 0xc000614000}, 0xc0000c8600)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x15cb880?}, {0x15ccc50, 0xc000614000}, 0xc0000c8600)\n\tC:/soft/Go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc00006eb40, {0x15cd658, 0xc0001adda0})\n\tC:/soft/Go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tC:/soft/Go/src/net/http/server.go:3071 +0x4db\n"}
+poetry/app/middleware.RecoveryMiddleware.func1.1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:44
+runtime.gopanic
+	C:/soft/Go/src/runtime/panic.go:838
+runtime.panicmem
+	C:/soft/Go/src/runtime/panic.go:220
+runtime.sigpanic
+	C:/soft/Go/src/runtime/signal_windows.go:255
+gorm.io/gorm.(*DB).getInstance
+	E:/golang/pkg/mod/gorm.io/gorm@v1.23.5/gorm.go:363
+gorm.io/gorm.(*DB).Offset
+	E:/golang/pkg/mod/gorm.io/gorm@v1.23.5/chainable_api.go:253
+poetry/app/dao.GetUserListDao
+	C:/test/gin/app/dao/GetUserListDDao.go:16
+poetry/app/controller.UserController.UserList
+	C:/test/gin/app/controller/UserController.go:37
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.RecoveryMiddleware.func1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:58
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.LoggerMiddleware.func1
+	C:/test/gin/app/middleware/LoggerMiddleware.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	C:/soft/Go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	C:/soft/Go/src/net/http/server.go:1966
+2022-05-10T16:55:04.217+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/user_list	{"status": 500, "method": "POST", "path": "/v1/user/user_list", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "6.3415ms"}
+2022-05-10T16:57:34.337+0800	ERROR	middleware/RecoveryMiddleware.go:44	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/user_list HTTP/1.1\r\nHost: localhost:9501\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 270\r\nContent-Type: multipart/form-data; boundary=--------------------------394679152036274712687546\r\nPostman-Token: d740ecb7-d506-4e21-9d89-6cbf1d302620\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 38 [running]:\nruntime/debug.Stack()\n\tC:/soft/Go/src/runtime/debug/stack.go:24 +0x65\npoetry/app/middleware.RecoveryMiddleware.func1.1()\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:47 +0x2da\npanic({0x108fce0, 0x166dcf0})\n\tC:/soft/Go/src/runtime/panic.go:838 +0x207\ngorm.io/gorm.(*DB).getInstance(0x1137890?)\n\tE:/golang/pkg/mod/gorm.io/gorm@v1.23.5/gorm.go:363 +0x18\ngorm.io/gorm.(*DB).Offset(0xc0000b1320?, 0x0)\n\tE:/golang/pkg/mod/gorm.io/gorm@v1.23.5/chainable_api.go:253 +0x1e\npoetry/app/dao.GetUserListDao(0x1, 0x64)\n\tC:/test/gin/app/dao/GetUserListDDao.go:17 +0x55\npoetry/app/controller.UserController.UserList({}, 0xc0004a8100?)\n\tC:/test/gin/app/controller/UserController.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.RecoveryMiddleware.func1(0xc0004a8100)\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:58 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.LoggerMiddleware.func1(0xc0004a8100)\n\tC:/test/gin/app/middleware/LoggerMiddleware.go:17 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0004a8100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0004a8100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00050ed00, 0xc0004a8100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00050ed00, {0x125cc30?, 0xc0004b4000}, 0xc0004a8000)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x125b860?}, {0x125cc30, 0xc0004b4000}, 0xc0004a8000)\n\tC:/soft/Go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc00006e000, {0x125d638, 0xc00060ca80})\n\tC:/soft/Go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tC:/soft/Go/src/net/http/server.go:3071 +0x4db\n"}
+poetry/app/middleware.RecoveryMiddleware.func1.1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:44
+runtime.gopanic
+	C:/soft/Go/src/runtime/panic.go:838
+runtime.panicmem
+	C:/soft/Go/src/runtime/panic.go:220
+runtime.sigpanic
+	C:/soft/Go/src/runtime/signal_windows.go:255
+gorm.io/gorm.(*DB).getInstance
+	E:/golang/pkg/mod/gorm.io/gorm@v1.23.5/gorm.go:363
+gorm.io/gorm.(*DB).Offset
+	E:/golang/pkg/mod/gorm.io/gorm@v1.23.5/chainable_api.go:253
+poetry/app/dao.GetUserListDao
+	C:/test/gin/app/dao/GetUserListDDao.go:17
+poetry/app/controller.UserController.UserList
+	C:/test/gin/app/controller/UserController.go:37
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.RecoveryMiddleware.func1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:58
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.LoggerMiddleware.func1
+	C:/test/gin/app/middleware/LoggerMiddleware.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	C:/soft/Go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	C:/soft/Go/src/net/http/server.go:1966
+2022-05-10T16:57:34.343+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/user_list	{"status": 500, "method": "POST", "path": "/v1/user/user_list", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "6.6128ms"}
+2022-05-10T17:00:05.186+0800	ERROR	middleware/RecoveryMiddleware.go:44	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /v1/user/user_list HTTP/1.1\r\nHost: localhost:9501\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 270\r\nContent-Type: multipart/form-data; boundary=--------------------------313299650131686989748655\r\nPostman-Token: 448a06aa-3351-477a-8be3-d312b254b20b\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 38 [running]:\nruntime/debug.Stack()\n\tC:/soft/Go/src/runtime/debug/stack.go:24 +0x65\npoetry/app/middleware.RecoveryMiddleware.func1.1()\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:47 +0x2da\npanic({0x155fce0, 0x1b3dcd0})\n\tC:/soft/Go/src/runtime/panic.go:838 +0x207\ngorm.io/gorm.(*DB).getInstance(0xc0000b22c0?)\n\tE:/golang/pkg/mod/gorm.io/gorm@v1.23.5/gorm.go:363 +0x18\ngorm.io/gorm.(*DB).Offset(0x14562ce?, 0x0)\n\tE:/golang/pkg/mod/gorm.io/gorm@v1.23.5/chainable_api.go:253 +0x1e\npoetry/app/dao.GetUserListDao(0x1, 0x64)\n\tC:/test/gin/app/dao/GetUserListDDao.go:16 +0x7c\npoetry/app/controller.UserController.UserList({}, 0xc0000be200?)\n\tC:/test/gin/app/controller/UserController.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.RecoveryMiddleware.func1(0xc0000be200)\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:58 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.LoggerMiddleware.func1(0xc0000be200)\n\tC:/test/gin/app/middleware/LoggerMiddleware.go:17 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000be200)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000be200)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0000849c0, 0xc0000be200)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0000849c0, {0x172cc50?, 0xc0000c6000}, 0xc0000be100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x172b880?}, {0x172cc50, 0xc0000c6000}, 0xc0000be100)\n\tC:/soft/Go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc00006e000, {0x172d658, 0xc000503b00})\n\tC:/soft/Go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tC:/soft/Go/src/net/http/server.go:3071 +0x4db\n"}
+poetry/app/middleware.RecoveryMiddleware.func1.1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:44
+runtime.gopanic
+	C:/soft/Go/src/runtime/panic.go:838
+runtime.panicmem
+	C:/soft/Go/src/runtime/panic.go:220
+runtime.sigpanic
+	C:/soft/Go/src/runtime/signal_windows.go:255
+gorm.io/gorm.(*DB).getInstance
+	E:/golang/pkg/mod/gorm.io/gorm@v1.23.5/gorm.go:363
+gorm.io/gorm.(*DB).Offset
+	E:/golang/pkg/mod/gorm.io/gorm@v1.23.5/chainable_api.go:253
+poetry/app/dao.GetUserListDao
+	C:/test/gin/app/dao/GetUserListDDao.go:16
+poetry/app/controller.UserController.UserList
+	C:/test/gin/app/controller/UserController.go:37
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.RecoveryMiddleware.func1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:58
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.LoggerMiddleware.func1
+	C:/test/gin/app/middleware/LoggerMiddleware.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	C:/soft/Go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	C:/soft/Go/src/net/http/server.go:1966
+2022-05-10T17:00:05.191+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/user_list	{"status": 500, "method": "POST", "path": "/v1/user/user_list", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "6.4421ms"}
+2022-05-10T17:54:34.642+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/catpcha/get_captcha	{"status": 404, "method": "POST", "path": "/v1/catpcha/get_captcha", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T17:54:37.112+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/catpcha/get_captcha	{"status": 404, "method": "GET", "path": "/v1/catpcha/get_captcha", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T19:57:09.158+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/jwt	{"status": 404, "method": "GET", "path": "/v1/user/jwt", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-10T20:05:45.754+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/pasertoken	{"status": 404, "method": "POST", "path": "/v1/user/pasertoken", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}

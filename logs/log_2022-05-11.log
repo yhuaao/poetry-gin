@@ -1,0 +1,120 @@
+2022-05-11T09:43:59.516+0800	ERROR	middleware/RecoveryMiddleware.go:44	[Recovery from panic]	{"error": "interface conversion: interface {} is int, not string", "request": "POST /v1/user/paser HTTP/1.1\r\nHost: localhost:9501\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\nPostman-Token: 004c6b98-9057-4ecb-9f2d-525b3a7f178d\r\nUser-Agent: PostmanRuntime/7.28.4\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MTgsIlBob25lIjoiMTY2MDU1MDE3MjAiLCJBdXRob3JpdHlJZCI6MSwiZXhwIjoxNjU0Nzc1ODMyLCJpc3MiOiJ0ZXN0IiwibmJmIjoxNjUyMTgzODMyfQ.oR6ssz7O-R8xczKKuq-b0NNDusWI8xwTaj3ypTzynUQ\r\n\r\n", "stack": "goroutine 84 [running]:\nruntime/debug.Stack()\n\tC:/soft/Go/src/runtime/debug/stack.go:24 +0x65\npoetry/app/middleware.RecoveryMiddleware.func1.1()\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:47 +0x2da\npanic({0x1090060, 0xc0001bef00})\n\tC:/soft/Go/src/runtime/panic.go:838 +0x207\npoetry/app/controller.JwtController.PaserToken({}, 0x104ee80?)\n\tC:/test/gin/app/controller/JwtController.go:17 +0x2e\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.JwtMiddleware.func1(0xc0006a2100)\n\tC:/test/gin/app/middleware/JwtMiddleware.go:39 +0x29d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.RecoveryMiddleware.func1(0xc0006a2100)\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:58 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.LoggerMiddleware.func1(0xc0006a2100)\n\tC:/test/gin/app/middleware/LoggerMiddleware.go:17 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0006a2100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0006a2100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000605380, 0xc0006a2100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000605380, {0x1812390?, 0xc0006ac000}, 0xc0006a2000)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0xc0001be450?}, {0x1812390, 0xc0006ac000}, 0xc0006a2000)\n\tC:/soft/Go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc000100000, {0x1812d98, 0xc0005007e0})\n\tC:/soft/Go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tC:/soft/Go/src/net/http/server.go:3071 +0x4db\n"}
+poetry/app/middleware.RecoveryMiddleware.func1.1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:44
+runtime.gopanic
+	C:/soft/Go/src/runtime/panic.go:838
+runtime.panicdottypeE
+	C:/soft/Go/src/runtime/iface.go:262
+poetry/app/controller.JwtController.PaserToken
+	C:/test/gin/app/controller/JwtController.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.JwtMiddleware.func1
+	C:/test/gin/app/middleware/JwtMiddleware.go:39
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.RecoveryMiddleware.func1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:58
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.LoggerMiddleware.func1
+	C:/test/gin/app/middleware/LoggerMiddleware.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	C:/soft/Go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	C:/soft/Go/src/net/http/server.go:1966
+2022-05-11T09:43:59.522+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/paser	{"status": 500, "method": "POST", "path": "/v1/user/paser", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "6.3395ms"}
+2022-05-11T09:44:28.059+0800	ERROR	middleware/RecoveryMiddleware.go:44	[Recovery from panic]	{"error": "interface conversion: interface {} is int, not string", "request": "POST /v1/user/paser HTTP/1.1\r\nHost: localhost:9501\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\nPostman-Token: e654eb42-858c-4d28-9ddf-a1f28bee6ed1\r\nUser-Agent: PostmanRuntime/7.28.4\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MTgsIlBob25lIjoiMTY2MDU1MDE3MjAiLCJBdXRob3JpdHlJZCI6MSwiZXhwIjoxNjU0ODI1NDYwLCJpc3MiOiJ0ZXN0IiwibmJmIjoxNjUyMjMzNDYwfQ.k9C1zhOUVRQ-lV-V4L6kJFArDZTrjs9__T1Pxz5mPGE\r\n\r\n", "stack": "goroutine 84 [running]:\nruntime/debug.Stack()\n\tC:/soft/Go/src/runtime/debug/stack.go:24 +0x65\npoetry/app/middleware.RecoveryMiddleware.func1.1()\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:47 +0x2da\npanic({0x1090060, 0xc0001bf950})\n\tC:/soft/Go/src/runtime/panic.go:838 +0x207\npoetry/app/controller.JwtController.PaserToken({}, 0x104ee80?)\n\tC:/test/gin/app/controller/JwtController.go:17 +0x2e\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.JwtMiddleware.func1(0xc0006a2100)\n\tC:/test/gin/app/middleware/JwtMiddleware.go:39 +0x29d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.RecoveryMiddleware.func1(0xc0006a2100)\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:58 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.LoggerMiddleware.func1(0xc0006a2100)\n\tC:/test/gin/app/middleware/LoggerMiddleware.go:17 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0006a2100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0006a2100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000605380, 0xc0006a2100)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000605380, {0x1812390?, 0xc0006ac1c0}, 0xc0006a2400)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0xc0001be450?}, {0x1812390, 0xc0006ac1c0}, 0xc0006a2400)\n\tC:/soft/Go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc000100000, {0x1812d98, 0xc0005007e0})\n\tC:/soft/Go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tC:/soft/Go/src/net/http/server.go:3071 +0x4db\n"}
+poetry/app/middleware.RecoveryMiddleware.func1.1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:44
+runtime.gopanic
+	C:/soft/Go/src/runtime/panic.go:838
+runtime.panicdottypeE
+	C:/soft/Go/src/runtime/iface.go:262
+poetry/app/controller.JwtController.PaserToken
+	C:/test/gin/app/controller/JwtController.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.JwtMiddleware.func1
+	C:/test/gin/app/middleware/JwtMiddleware.go:39
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.RecoveryMiddleware.func1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:58
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.LoggerMiddleware.func1
+	C:/test/gin/app/middleware/LoggerMiddleware.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	C:/soft/Go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	C:/soft/Go/src/net/http/server.go:1966
+2022-05-11T09:44:28.065+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/paser	{"status": 500, "method": "POST", "path": "/v1/user/paser", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "6.8165ms"}
+2022-05-11T09:44:52.759+0800	ERROR	middleware/RecoveryMiddleware.go:44	[Recovery from panic]	{"error": "interface conversion: interface {} is int, not string", "request": "POST /v1/user/paser HTTP/1.1\r\nHost: localhost:9501\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\nPostman-Token: 77a18f33-bb10-4bd7-862d-7b535abd3046\r\nUser-Agent: PostmanRuntime/7.28.4\r\nX-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MTgsIlBob25lIjoiMTY2MDU1MDE3MjAiLCJBdXRob3JpdHlJZCI6MSwiZXhwIjoxNjU0ODI1NDYwLCJpc3MiOiJ0ZXN0IiwibmJmIjoxNjUyMjMzNDYwfQ.k9C1zhOUVRQ-lV-V4L6kJFArDZTrjs9__T1Pxz5mPGE\r\n\r\n", "stack": "goroutine 68 [running]:\nruntime/debug.Stack()\n\tC:/soft/Go/src/runtime/debug/stack.go:24 +0x65\npoetry/app/middleware.RecoveryMiddleware.func1.1()\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:47 +0x2da\npanic({0xe80060, 0xc000115d70})\n\tC:/soft/Go/src/runtime/panic.go:838 +0x207\npoetry/app/controller.JwtController.PaserToken({}, 0xe3ee80?)\n\tC:/test/gin/app/controller/JwtController.go:17 +0x2e\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.JwtMiddleware.func1(0xc00025c000)\n\tC:/test/gin/app/middleware/JwtMiddleware.go:39 +0x29d\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.RecoveryMiddleware.func1(0xc00025c000)\n\tC:/test/gin/app/middleware/RecoveryMiddleware.go:58 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\npoetry/app/middleware.LoggerMiddleware.func1(0xc00025c000)\n\tC:/test/gin/app/middleware/LoggerMiddleware.go:17 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc00025c000)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc00025c000)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000084b60, 0xc00025c000)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000084b60, {0x1602390?, 0xc000220000}, 0xc000210900)\n\tE:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0xc0005030b0?}, {0x1602390, 0xc000220000}, 0xc000210900)\n\tC:/soft/Go/src/net/http/server.go:2916 +0x43b\nnet/http.(*conn).serve(0xc000100000, {0x1602d98, 0xc000502f00})\n\tC:/soft/Go/src/net/http/server.go:1966 +0x5d7\ncreated by net/http.(*Server).Serve\n\tC:/soft/Go/src/net/http/server.go:3071 +0x4db\n"}
+poetry/app/middleware.RecoveryMiddleware.func1.1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:44
+runtime.gopanic
+	C:/soft/Go/src/runtime/panic.go:838
+runtime.panicdottypeE
+	C:/soft/Go/src/runtime/iface.go:262
+poetry/app/controller.JwtController.PaserToken
+	C:/test/gin/app/controller/JwtController.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.JwtMiddleware.func1
+	C:/test/gin/app/middleware/JwtMiddleware.go:39
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.RecoveryMiddleware.func1
+	C:/test/gin/app/middleware/RecoveryMiddleware.go:58
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+poetry/app/middleware.LoggerMiddleware.func1
+	C:/test/gin/app/middleware/LoggerMiddleware.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	E:/golang/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	C:/soft/Go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	C:/soft/Go/src/net/http/server.go:1966
+2022-05-11T09:44:52.764+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/paser	{"status": 500, "method": "POST", "path": "/v1/user/paser", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "5.8814ms"}
