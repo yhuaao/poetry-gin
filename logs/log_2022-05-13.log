@@ -1,0 +1,4 @@
+2022-05-13T11:04:31.126+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/list 	{"status": 404, "method": "POST", "path": "/v1/user/list ", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-13T11:04:34.363+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/list 	{"status": 404, "method": "GET", "path": "/v1/user/list ", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-13T11:05:10.348+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/list 	{"status": 404, "method": "GET", "path": "/v1/user/list ", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2022-05-13T11:06:10.872+0800	INFO	middleware/LoggerMiddleware.go:23	/v1/user/list 	{"status": 404, "method": "GET", "path": "/v1/user/list ", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
